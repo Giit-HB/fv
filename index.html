@@ -224,6 +224,124 @@
             display: block;
         }
 
+        @media (max-width: 768px) {
+            body {
+                padding: 12px;
+            }
+
+            .header {
+                padding: 14px 16px;
+                margin-bottom: 16px;
+            }
+
+            .logo {
+                font-size: 22px;
+            }
+
+            .title-section {
+                padding: 18px;
+                margin-bottom: 16px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            .subtitle {
+                font-size: 14px;
+            }
+
+            .folders-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+            }
+
+            .folder-card {
+                display: grid;
+                grid-template-columns: auto minmax(0, 1fr);
+                grid-template-areas:
+                    "count count"
+                    "icon name";
+                align-items: center;
+                column-gap: 8px;
+                row-gap: 6px;
+                padding: 12px;
+                min-width: 0;
+                overflow: hidden;
+            }
+
+            .folder-card:hover {
+                transform: none;
+            }
+
+            .folder-count {
+                grid-area: count;
+                font-size: 11px;
+                line-height: 1.2;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                min-width: 0;
+            }
+
+            .folder-icon {
+                grid-area: icon;
+                width: 36px;
+                height: 36px;
+                font-size: 18px;
+                margin-bottom: 0;
+                border-radius: 8px;
+                flex-shrink: 0;
+            }
+
+            .folder-name {
+                grid-area: name;
+                font-size: 14px;
+                margin-bottom: 0;
+                min-width: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .file-item {
+                min-width: 0;
+                overflow: hidden;
+            }
+
+            .file-info {
+                min-width: 0;
+                flex: 1;
+                overflow: hidden;
+            }
+
+            .file-name {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .admin-mode .folder-card {
+                padding-top: 38px;
+            }
+
+            .delete-folder-btn,
+            .rename-folder-btn {
+                width: 26px;
+                height: 26px;
+                font-size: 11px;
+                top: 8px;
+            }
+
+            .delete-folder-btn {
+                right: 8px;
+            }
+
+            .rename-folder-btn {
+                right: 36px;
+            }
+        }
+
         .modal {
             display: none;
             position: fixed;
@@ -1155,8 +1273,8 @@
                     <div class="file-item" id="file-item-${fileId}">
                         <div class="file-info">
                             <div class="file-icon">${icon}</div>
-                            <div>
-                                <div>${file.name}</div>
+                            <div style="min-width:0; overflow:hidden;">
+                                <div class="file-name">${file.name}</div>
                                 <div class="file-size">${fileSize}</div>
                             </div>
                         </div>
