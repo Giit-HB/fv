@@ -1,4 +1,4 @@
-# 📚 [FILEVAULT]
+## 📚 FILEVAULT
 
 An open-access digital library for college students to view, read, and download academic resources—completely free with zero login required.
 
