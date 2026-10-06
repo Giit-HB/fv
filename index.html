@@ -224,6 +224,88 @@
             display: block;
         }
 
+        @media (max-width: 768px) {
+            body {
+                padding: 12px;
+            }
+
+            .header {
+                padding: 14px 16px;
+                margin-bottom: 16px;
+            }
+
+            .logo {
+                font-size: 22px;
+            }
+
+            .title-section {
+                padding: 18px;
+                margin-bottom: 16px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            .folders-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+            }
+
+            .folder-card {
+                display: grid;
+                grid-template-columns: 40px minmax(0, 1fr);
+                grid-template-areas:
+                    "icon name"
+                    "count count";
+                align-items: center;
+                column-gap: 10px;
+                row-gap: 6px;
+                padding: 12px;
+                min-width: 0;
+            }
+
+            .folder-card:hover {
+                transform: none;
+            }
+
+            .folder-icon {
+                grid-area: icon;
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+                margin-bottom: 0;
+                border-radius: 8px;
+            }
+
+            .folder-name {
+                grid-area: name;
+                font-size: 14px;
+                margin-bottom: 0;
+                min-width: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .folder-count {
+                grid-area: count;
+                font-size: 12px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .files-list {
+                display: block;
+                width: 100%;
+            }
+
+            .file-item {
+                width: 100%;
+            }
+        }
+
         .modal {
             display: none;
             position: fixed;
