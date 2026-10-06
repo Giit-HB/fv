@@ -235,7 +235,7 @@
             }
 
             .logo {
-                font-size: 22px;
+                font-size: 30px;
             }
 
             .title-section {
@@ -249,20 +249,22 @@
 
             .folders-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 10px;
+                gap: 12px;
             }
 
             .folder-card {
                 display: grid;
-                grid-template-columns: 40px minmax(0, 1fr);
+                grid-template-columns: 56px minmax(0, 1fr);
                 grid-template-areas:
                     "icon name"
                     "count count";
                 align-items: center;
-                column-gap: 10px;
-                row-gap: 6px;
-                padding: 12px;
+                align-content: center;
+                column-gap: 8px;
+                row-gap: 8px;
+                padding: 18px 10px;
                 min-width: 0;
+                min-height: 125px; 
             }
 
             .folder-card:hover {
@@ -271,16 +273,16 @@
 
             .folder-icon {
                 grid-area: icon;
-                width: 40px;
-                height: 40px;
-                font-size: 20px;
+                width: 56px;
+                height: 56px;
+                font-size: 28px;
                 margin-bottom: 0;
-                border-radius: 8px;
+                border-radius: 12px;
             }
 
             .folder-name {
                 grid-area: name;
-                font-size: 14px;
+                font-size: 21px;
                 margin-bottom: 0;
                 min-width: 0;
                 white-space: nowrap;
@@ -290,7 +292,7 @@
 
             .folder-count {
                 grid-area: count;
-                font-size: 12px;
+                font-size: 13px;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
